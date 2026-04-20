@@ -73,7 +73,7 @@ function confirmarAsistencia() {
   boton.innerText = "Enviando...";
 
   // 🔥 Enviar a Apps Script
-  fetch("https://script.google.com/macros/s/AKfycbx3tGrGHXBYU3LKwk795_UDSpX70kEGEiUS3Ly7c-vvgzg2_BRope1OQu58Y2E-Oof1/exec", {
+  fetch("https://script.google.com/macros/s/AKfycbwGabVzcH2BCoNofACVuebu-CWBOb028aPgesoY9436nC4Gxsh7VCF5zvfKP0xx-CRi/exec", {
   method: "POST",
   body: new URLSearchParams({
     nombre: nombre,
