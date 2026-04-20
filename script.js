@@ -1,4 +1,3 @@
-// FUNCIÓN PARA MOSTRAR LA INVITACIÓN
 // 📌 Leer parámetros de la URL
 function obtenerParametros() {
   const params = new URLSearchParams(window.location.search);
@@ -72,22 +71,19 @@ function confirmarAsistencia() {
   boton.disabled = true;
   boton.innerText = "Enviando...";
 
-  // 🔥 Enviar a Apps Script
-  fetch("https://script.google.com/macros/s/AKfycbz-LxoJZSGwZcNArFMtpFa6pTZOXq-UUjCQI6F7Qm47A7YbxppGzOLaOG8VVeLH4DiV/exec", {
-  method: "POST",
-  body: new URLSearchParams({
-    nombre: nombre,
-    asistencia: asistencia,
-    confirmados: confirmados.join(", ")
-  })
-});
+  // 🔥 ENVIAR CON GET (SOLUCIÓN FINAL)
+  const url = `https://script.google.com/macros/s/AKfycbz-LxoJZSGwZcNArFMtpFa6pTZOXq-UUjCQI6F7Qm47A7YbxppGzOLaOG8VVeLH4DiV/exec?nombre=${encodeURIComponent(nombre)}&asistencia=${encodeURIComponent(asistencia)}&confirmados=${encodeURIComponent(confirmados.join(", "))}`;
 
-  // 💌 Mensaje final
-  setTimeout(() => {
-    document.getElementById("contenido").innerHTML = `
-      <h2>¡Gracias por confirmar! 💖</h2>
-      <p>Te esperamos 🎉</p>
-    `;
-  }, 800);
+  fetch(url)
+    .then(() => {
+      document.getElementById("contenido").innerHTML = `
+        <h2>¡Gracias por confirmar! 💖</h2>
+        <p>Te esperamos 🎉</p>
+      `;
+    })
+    .catch(() => {
+      alert("Error al enviar los datos");
+      boton.disabled = false;
+      boton.innerText = "Confirmar";
+    });
 }
-
