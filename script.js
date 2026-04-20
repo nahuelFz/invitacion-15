@@ -74,17 +74,13 @@ function confirmarAsistencia() {
 
   // 🔥 Enviar a Apps Script
   fetch("https://script.google.com/macros/s/AKfycbx5Jq-BlSdrTyw15GJdX76yM80N8pE8XC3Q6DnE58D0DkeA3Rr39wRDz0CJaUZdFp1c/exec", {
-    method: "POST",
-    mode: "no-cors",
-    body: JSON.stringify({
-      nombre: nombre,
-      asistencia: asistencia,
-      confirmados: confirmados.join(", ")
-    }),
-    headers: {
-      "Content-Type": "application/json"
-    }
-  });
+  method: "POST",
+  body: new URLSearchParams({
+    nombre: nombre,
+    asistencia: asistencia,
+    confirmados: confirmados.join(", ")
+  })
+});
 
   // 💌 Mensaje final
   setTimeout(() => {
