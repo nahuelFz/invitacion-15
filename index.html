@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Invitación 15</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div id="contenido">
+    <h1>Mis 15 💖</h1>
+
+    <!-- Nombre del invitado -->
+    <h2 id="tituloInvitado"></h2>
+
+    <!-- Lista dinámica -->
+    <h3>Confirmá quiénes asistirán:</h3>
+    <div id="listaInvitados"></div>
+
+    <!-- Asistencia -->
+    <div class="opciones">
+      <label>
+        <input type="radio" name="asiste" value="SI"> Asistiré
+      </label>
+      <label>
+        <input type="radio" name="asiste" value="NO"> No podré asistir
+      </label>
+    </div>
+
+    <button id="btnConfirmar" onclick="confirmarAsistencia()">
+      Confirmar
+    </button>
+  </div>
+
+  <!-- IMPORTANTE: script al final -->
+  <script src="script.js"></script>
+</body>
+</html>
