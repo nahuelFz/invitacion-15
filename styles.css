@@ -3,41 +3,33 @@ body {
   font-family: 'Montserrat', sans-serif;
   color: white;
 
-  background: url("./img/Fondo.jpeg") no-repeat center center fixed;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+  background: url("./img/Fondo.jpeg") no-repeat center top;
+  background-size: cover;
   background-color: black;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-
-  border-radius: 25px;
-  overflow: hidden; /* 👈 ESTA ES LA CLAVE */
-
+  /* 👇 sacamos el centrado forzado */
+  display: block;
 }
 
 /* 🖤 tarjeta */
 .contenedor {
   
   position: relative;
-  
-  width: 360px;        /* 👈 ancho fijo tipo celular */
-  min-height: 80vh;      /* 👈 proporción vertical */
+
+  width: 100%;
+  max-width: 420px;
+  min-height: 100vh;
+
+  margin: auto;
 
   border-radius: 25px;
-  overflow: hidden; /* 👈 ESTA ES LA CLAVE */
-
-  /*background: url("img/Fondo.jpeg") no-repeat center;*/
-  background-size: cover;
+  overflow: hidden;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
 
-  padding: 20px;
+  padding: 25px;
 
   box-shadow: 0 0 30px rgba(255,255,255,0.2);
   text-align: center;
