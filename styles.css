@@ -11,6 +11,13 @@ body {
   display: block;
 }
 
+@media (min-width: 768px) {
+  body {
+    background-size: cover;
+    background-position: center;
+  }
+}
+
 /* 🖤 tarjeta */
 .contenedor {
   
@@ -18,8 +25,8 @@ body {
 
   width: 100%;
   max-width: 420px;
-  min-height: 100vh;
 
+  min-height: 100vh;
   margin: auto;
 
   border-radius: 25px;
@@ -31,9 +38,9 @@ body {
 
   padding: 25px;
 
-  box-shadow: 0 0 30px rgba(255,255,255,0.2);
   text-align: center;
-
+  
+  box-shadow: 0 0 30px rgba(255,255,255,0.2);
 }
 
 @media (max-width: 500px) {
@@ -42,6 +49,13 @@ body {
     min-height: 85vh;
     padding: 25px;
   }
+
+  @media (min-width: 768px) {
+  .contenedor {
+    margin: 40px auto;
+    min-height: 700px;
+  }
+}
 
 /* ✨ títulos */
 .tituloArriba {
