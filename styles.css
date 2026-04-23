@@ -52,8 +52,12 @@ body {
 
   @media (min-width: 768px) {
   .contenedor {
-    margin: 40px auto;
-    min-height: 700px;
+    width: 380px;
+    height: 700px;
+
+    border-radius: 25px;
+
+    box-shadow: 0 0 40px rgba(255,255,255,0.15);
   }
 }
 
@@ -113,7 +117,7 @@ p {
 /* invitados */
 #listaInvitados {
   margin: 15px 0;
-  text-align: left;
+  text-align: center;
 }
 
 /* 🔘 botón brillante */
