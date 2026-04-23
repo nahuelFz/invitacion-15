@@ -3,36 +3,59 @@
 <head>
   <meta charset="UTF-8">
   <title>Invitación 15</title>
+
+  <!-- Tipografías -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <div id="contenido">
-    <h1>Mis 15 💖</h1>
+  <div class="contenedor" id="contenido">
 
-    <!-- Nombre del invitado -->
-    <h2 id="tituloInvitado"></h2>
+    <!-- ✨ Título estilo invitación -->
+    <h2 class="tituloArriba">Ernestina</h2>
+    <h1 class="tituloPrincipal">Mis 15 Años</h1>
 
-    <!-- Lista dinámica -->
-    <h3>Confirmá quiénes asistirán:</h3>
-    <div id="listaInvitados"></div>
+    <p class="subtitulo">Te invito a celebrar mis 15</p>
 
-    <!-- Asistencia -->
-    <div class="opciones">
-      <label>
-        <input type="radio" name="asiste" value="SI"> Asistiré
-      </label>
-      <label>
-        <input type="radio" name="asiste" value="NO"> No podré asistir
-      </label>
+    <!-- 👑 Nombre dinámico -->
+    <h1 id="tituloInvitado"></h1>
+
+    <!-- 📅 Info -->
+    <div class="infoEvento">
+      <span>Domingo</span>
+      <span>Mayo 24</span>
+      <span>21:00 hs</span>
     </div>
 
+    <p class="dress">Dress code: Brillos ✨</p>
+
+    <p class="ubicacion">
+      Ubicación:<br>
+      Salón: RIM 20
+    </p>
+
+    <hr>
+
+    <!-- ✔ Confirmación -->
+    <p>¿Vas a asistir?</p>
+
+    <div class="opciones">
+      <label><input type="radio" name="asiste" value="SI"> Sí, asistiré</label>
+      <label><input type="radio" name="asiste" value="NO"> No podré</label>
+    </div>
+
+    <!-- 👨‍👩‍👧 Invitados dinámicos -->
+    <div id="listaInvitados"></div>
+
+    <!-- 🔘 Botón -->
     <button id="btnConfirmar" onclick="confirmarAsistencia()">
-      Confirmar
+      Confirmar asistencia
     </button>
+
   </div>
 
-  <!-- IMPORTANTE: script al final -->
   <script src="script.js"></script>
 </body>
 </html>

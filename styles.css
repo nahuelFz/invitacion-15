@@ -1,39 +1,124 @@
 body {
-  font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #fce4ec, #f8bbd0);
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+
+  background: url("./img/Fondo.jpeg") no-repeat center center fixed;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: black;
+
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
+
+  border-radius: 25px;
+  overflow: hidden; /* 👈 ESTA ES LA CLAVE */
+
+}
+
+/* 🖤 tarjeta */
+.contenedor {
+  .contenedor {
+  position: relative;
+  
+  width: 360px;        /* 👈 ancho fijo tipo celular */
+  height: 640px;       /* 👈 proporción vertical */
+
+  border-radius: 25px;
+  overflow: hidden; /* 👈 ESTA ES LA CLAVE */
+
+  /*background: url("img/Fondo.jpeg") no-repeat center;*/
+  background-size: cover;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  padding: 20px;
+
+  box-shadow: 0 0 30px rgba(255,255,255,0.2);
+}
+}
+
+/* ✨ títulos */
+.tituloArriba {
+  font-family: 'Great Vibes', cursive;
+  font-size: 22px;
+  text-align: center;
+}
+
+.tituloPrincipal {
+  font-family: 'Great Vibes', cursive;
+  font-size: 42px;
   margin: 0;
 }
 
-#contenido {
-  background: white;
-  padding: 20px;
-  border-radius: 20px;
-  width: 320px;
-  text-align: center;
-  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+/* 👑 nombre */
+#tituloInvitado {
+  font-family: 'Great Vibes', cursive;
+  font-size: 30px;
+  margin: 10px 0;
 }
 
-h1 {
-  color: #d81b60;
-}
-
-.opciones {
+/* 📅 info */
+.infoEvento {
+  display: flex;
+  justify-content: space-around;
   margin: 15px 0;
+  color: #ccc;
 }
 
+/* ✨ textos */
+.subtitulo {
+  color: #aaa;
+}
+
+.dress {
+  font-style: italic;
+  color: #ccc;
+}
+
+.ubicacion {
+  color: #bbb;
+}
+
+/* ✔ opciones */
+.opciones label {
+  text-align: center;
+  display: block;
+  margin: 8px 0;
+}
+
+p {
+  text-align: center;
+}
+
+/* invitados */
+#listaInvitados {
+  margin: 15px 0;
+  text-align: left;
+}
+
+/* 🔘 botón brillante */
 button {
-  background: #d81b60;
-  color: white;
+  margin-top: 15px;
+  padding: 12px;
+  width: 100%;
+  border-radius: 30px;
   border: none;
-  padding: 10px 20px;
-  border-radius: 10px;
+
+  background: linear-gradient(135deg, #aaa, #fff, #aaa);
+  color: black;
+  font-weight: bold;
+
   cursor: pointer;
+  transition: 0.3s;
 }
 
-button:disabled {
-  background: gray;
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px white;
 }
