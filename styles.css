@@ -84,19 +84,84 @@ body {
 /* 📅 info */
 .infoEvento {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
+
+  gap: 20px;
+  margin: 20px 0;
+
+  font-family: 'Libre Baskerville', serif;
+  font-weight: 600;
+
+  font-size: clamp(16px, 3vw, 20px);
+  letter-spacing: 1px;
+}
+
+/* líneas verticales */
+.infoEvento div {
+  position: relative;
+  padding: 0 10px;
+}
+
+.infoEvento div:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 1px;
+  height: 25px;
+
+  background: rgba(255,255,255,0.5);
+}
+
+/*Boton Ubicacion*/
+.ubicacion {
   margin: 15px 0;
-  color: #ccc;
+  text-align: center;
+}
+
+.btnIcono {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 55px;
+  height: 55px;
+
+  border-radius: 50%;
+  background: rgba(255,255,255,0.15);
+
+  color: white;
+  text-decoration: none;
+
+  backdrop-filter: blur(6px);
+
+  transition: 0.3s;
+}
+
+.btnIcono span {
+  font-size: 28px;
+}
+
+/* ✨ efecto hover */
+.btnIcono:hover {
+  transform: scale(1.1);
+  background: rgba(255,255,255,0.3);
+  box-shadow: 0 0 15px white;
 }
 
 /* ✨ textos */
 .subtitulo {
   color: #aaa;
+  font-family: 'Libre Baskerville', serif;
 }
 
 .dress {
-  font-style: italic;
+  
   color: #ccc;
+  font-family: 'Libre Baskerville', serif;
 }
 
 .ubicacion {
@@ -112,6 +177,7 @@ body {
 
 p {
   text-align: center;
+  font-family: 'Libre Baskerville', serif;
 }
 
 /* invitados */

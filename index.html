@@ -6,6 +6,9 @@
 
   <!-- Tipografías -->
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,19 +28,24 @@
 
     <!-- 📅 Info -->
     <div class="infoEvento">
-      <span>Domingo</span>
-      <span>Mayo 24</span>
-      <span>21:00 hs</span>
+       <div>Domingo</div>
+       <div>24 de Mayo</div>
+       <div>21:00 hs</div>
     </div>
 
-    <p class="dress">Dress code: Brillos ✨</p>
+    <p class="dress">Dress code: Elegante </p>
 
-    <p class="ubicacion">
-      Ubicación:<br>
-      Salón: RIM 20
-    </p>
+    <div class="ubicacion">
+       <a href="https://maps.app.goo.gl/h1SJJaXM7u4gNSdU6"
+          target="_blank"
+          class="btnIcono">
+       <span class="material-symbols-outlined">location_on</span>
+       </a>
+    </div>
 
     <hr>
+
+    <p>Alias: nwn.fz </p>
 
     <!-- ✔ Confirmación -->
     <p>¿Vas a asistir?</p>
@@ -48,7 +56,7 @@
     </div>
 
     <!-- 👨‍👩‍👧 Invitados dinámicos -->
-    <div id="listaInvitados"></div>
+    <div id="listaInvitados">¿Quienes Asistirán?</div>
 
     <!-- 🔘 Botón -->
     <button id="btnConfirmar" onclick="confirmarAsistencia()">

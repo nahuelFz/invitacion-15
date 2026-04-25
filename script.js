@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const contenedor = document.getElementById("listaInvitados");
 
   // Mostrar nombre
-  titulo.innerText = `Hola ${datos.nombre} 💖`;
+  titulo.innerText = `Hola ${datos.nombre} `;
 
   // 👉 Caso: solo una persona
   if (datos.invitados.length === 1) {
@@ -77,7 +77,7 @@ function confirmarAsistencia() {
   fetch(url)
     .then(() => {
       document.getElementById("contenido").innerHTML = `
-        <h2>¡Gracias por confirmar! 💖</h2>
+        <h2>¡Gracias por confirmar! </h2>
         <p>Te esperamos 🎉</p>
       `;
     })
