@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // 👉 Caso: solo una persona
   if (datos.invitados.length === 1) {
-    contenedor.innerHTML = `<p>Confirmá tu asistencia 🎉</p>`;
+    contenedor.innerHTML = `<p>Confirmá tu asistencia </p>`;
     return;
   }
 
