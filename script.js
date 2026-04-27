@@ -77,8 +77,8 @@ function confirmarAsistencia() {
   fetch(url)
     .then(() => {
       document.getElementById("contenido").innerHTML = `
-        <h2>¡Gracias por confirmar! </h2>
-        <p>Te esperamos 🎉</p>
+        <h2>¡Gracias por Confirmar! </h2>
+        <p>Te esperamos </p>
       `;
     })
     .catch(() => {
