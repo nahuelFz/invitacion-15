@@ -194,8 +194,6 @@ body {
 p {
   text-align: center;
   font-family: 'Libre Baskerville', serif;
-
-  
 }
 
 
@@ -293,6 +291,16 @@ button:hover {
 /* texto debajo */
 .infoExtra p {
   margin-top: 8px;
-  font-size: 13px;
+  font-family: 'Libre Baskerville', serif;
+  font-weight: 600;
+
+  font-size: clamp(16px, 3vw, 20px);
+  letter-spacing: 1px;
+  
   color: white;
+  text-shadow:
+    1px 1px 0 black,
+    2px 2px 0 black,
+    3px 3px 6px rgba(0,0,0,0.8);
+
 }
