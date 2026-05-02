@@ -77,7 +77,7 @@ function confirmarAsistencia() {
   fetch(url)
     .then(() => {
       document.getElementById("contenido").innerHTML = `
-        <h2>¡Gracias por Confirmar! </h2>
+        <h2 class="msmConfir">¡Gracias por Confirmar! </h2>
         <p>Te esperamos </p>
       `;
     })
